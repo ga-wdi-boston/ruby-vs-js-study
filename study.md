@@ -17,7 +17,19 @@ Use `grunt test` to test your code.
 Describe three examples of differens between Ruby and Javasctipt?
 
 ```md
-<!-- your answer here -->
+1. In Javascript, === means strict equality. Eg, 5 === 5 returns true
+   In Ruby, "==" is used for strict equality.
+2. In Javascript, incrementing or decrementing uses ++ or --.
+   In Ruby, we use += or -=
+3. Function syntaxes are different in Javascript and Ruby
+4. Ruby:
+   def hello_world
+    puts "hello world"
+   end
+   Javascript:
+   function hello_World() {
+    console.log("Hello World");
+   }
 ```
 
 ## Ruby Versus Javascript :: String Interpolation
@@ -35,7 +47,9 @@ Experiment in pry and place your answer below.
 ```
 
 ```md
-<!-- your answer here -->
+name = "Jason"
+age = "28"
+"#{name} is #{age} years old"
 ```
 
 ## Ruby vs. Javascript :: String Methods
@@ -46,11 +60,23 @@ Experiment in pry and place your answer below.
 4. Even better if you can do so while removing the two `- -`'s between `general` and `assembly`
 
 ```md
-<!-- your answer here -->
+str = "ylbmessa lareneg"
+str.reverse!
+arr = []
+0.upto(str.length - 1) do |i|
+  arr << str[i]
+end
+len = (str.length - 1) * 2
+0.upto(len) do |i|
+  arr << arr[i]
+  arr << "-"
+end
 ```
 
 ## What are three common "gotchas" in Ruby after learning Javscript.
 
 ```md
-<!-- your answer here -->
+"===" and "==" mean two different things in Javascript and Ruby.
+Parantheses are not required to invoke a method in Ruby.
+Ruby's convention is to use the snake_case in naming variables and functions.
 ```
