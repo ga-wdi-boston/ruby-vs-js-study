@@ -17,7 +17,16 @@ Use `grunt test` to test your code.
 Describe three examples of differens between Ruby and Javasctipt?
 
 ```md
-<!-- your answer here -->
+In Ruby you can use spaces in the place of parenthesis to enclose arguments
+passed to functions and parameters; in Javascript parenthesis are required.
+
+Ruby has more robust/elegant array manipulation then Javascript does. E.g. in
+Ruby you can use negative indexes to get a value of from the end of an array
+while in Javascript you cannot.
+
+In Ruby the case of a character means something when naming variables, such as
+StartingWithACapitalLetter meaning the variable is a constant, while in Javascript
+you have to declare the variable using 'const'
 ```
 
 ## Ruby Versus Javascript :: String Interpolation
@@ -35,7 +44,12 @@ Experiment in pry and place your answer below.
 ```
 
 ```md
-<!-- your answer here -->
+[1] pry(main)> name = "Jason"
+=> "Jason"
+[2] pry(main)> age = 28
+=> 35
+[3] pry(main)> "#{name} is #{age} years old."
+=> "Jason is 28 years old."
 ```
 
 ## Ruby vs. Javascript :: String Methods
@@ -46,11 +60,18 @@ Experiment in pry and place your answer below.
 4. Even better if you can do so while removing the two `- -`'s between `general` and `assembly`
 
 ```md
-<!-- your answer here -->
+str.reverse.split('').join(',').gsub(',', '-').gsub('- -', ' ')
 ```
 
 ## What are three common "gotchas" in Ruby after learning Javscript.
 
 ```md
-<!-- your answer here -->
+You cannot 'use' negative indexes in Javascript! It will simply return undefined.
+In Ruby, however, a negative index will return the value from the end of an array.
+
+Ruby has different syntax for enclosing things like loops and if statements than
+in Javascript (Ruby 'do/end' vs Javascript '{/}')
+
+Comparisons in Ruby and Javascript behave differently then each other. So == in
+Ruby is not the same as == in Javascript, likewise with === in Ruby and === in Javascript.
 ```
