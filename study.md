@@ -17,7 +17,11 @@ Use `grunt test` to test your code.
 Describe three examples of differens between Ruby and Javasctipt?
 
 ```md
-<!-- your answer here -->
+Javascript does not have implicit returns, they must be specified inside functions or they will return nothing.
+
+Ruby allows variables to be declared without a declaration like "let" or "const"
+
+iteration in JS requires a for loop (usually). Ruby has many methods to avoid this, such as .each, which accomplished the same thing with less code.
 ```
 
 ## Ruby Versus Javascript :: String Interpolation
@@ -35,7 +39,9 @@ Experiment in pry and place your answer below.
 ```
 
 ```md
-<!-- your answer here -->
+name = "Jason"
+age = 28
+"#{name} is #{age} years old."
 ```
 
 ## Ruby vs. Javascript :: String Methods
@@ -46,11 +52,16 @@ Experiment in pry and place your answer below.
 4. Even better if you can do so while removing the two `- -`'s between `general` and `assembly`
 
 ```md
-<!-- your answer here -->
+str.reverse
+str.reverse.split("")
+str.reverse.split("").join("-")
+str.reverse.gsub(/\s+/, "").split("").join("-")
 ```
 
 ## What are three common "gotchas" in Ruby after learning Javscript.
 
 ```md
-<!-- your answer here -->
+1. only nil and false are falsey in Ruby. "" and 0, for example, are truthy.
+2. == is equal value in Ruby, in JS it's ===
+3. Ruby uses floor division for integers, so 4/3 => 1, not 1.33333333 as in JS
 ```
