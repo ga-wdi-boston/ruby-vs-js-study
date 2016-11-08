@@ -17,7 +17,30 @@ Use `grunt test` to test your code.
 Describe three examples of differens between Ruby and Javasctipt?
 
 ```md
-<!-- your answer here -->
+The firstn difference is how to increment (or increase) variables. For example,
+say we want to increase i by 1.
+JS: i+
+Ruby: i += 1
+
+The second difference is when we want to do an absolute comparison of objects,
+meaning we want to see if they are the exact same object.
+JS: 3 === 3
+Ruby: 3 == 3
+
+A third difference is the syntax of methods. JS requires parens and
+curly brackets that are not needed in Ruby.
+
+JS:
+function hello() {
+  console.log("hello");
+}
+
+Ruby:
+def hello
+  puts "hello"
+end
+
+Source: http://blog.flatironschool.com/javascript-vs-ruby/
 ```
 
 ## Ruby Versus Javascript :: String Interpolation
@@ -35,7 +58,9 @@ Experiment in pry and place your answer below.
 ```
 
 ```md
-<!-- your answer here -->
+name = "Jason"
+age = 28
+"#{name} is #{age} years old."
 ```
 
 ## Ruby vs. Javascript :: String Methods
@@ -46,11 +71,16 @@ Experiment in pry and place your answer below.
 4. Even better if you can do so while removing the two `- -`'s between `general` and `assembly`
 
 ```md
-<!-- your answer here -->
+1. => "ylbmessa lareneg"
+2. str.reverse().chars()
+3. str.reverse().chars().join("-")
+4. str.reverse().chars().join("-").gsub('- -', ' ')
 ```
 
 ## What are three common "gotchas" in Ruby after learning Javscript.
 
 ```md
-<!-- your answer here -->
+1. Ruby doesn't implicitly convert numbers to strings like JavaScript.
+2. Ruby's convention is to use underscores between words in names (a.k.a. 'snake_case'). Constants start with a capital letter.
+3. The Ruby comment character is #. Everything following a # on a line is ignored by the interpreter.
 ```
