@@ -17,7 +17,7 @@ Use `grunt test` to test your code.
 Describe three examples of differens between Ruby and Javasctipt?
 
 ```md
-<!-- your answer here -->
+Incrementing and Decrementing, parseInt(); vs .to_i, Functions
 ```
 
 ## Ruby Versus Javascript :: String Interpolation
@@ -35,7 +35,8 @@ Experiment in pry and place your answer below.
 ```
 
 ```md
-<!-- your answer here -->
+person = { name: jason, age: 28 }
+"#{person[:name]} is #{person[:age]} years old."
 ```
 
 ## Ruby vs. Javascript :: String Methods
@@ -46,11 +47,11 @@ Experiment in pry and place your answer below.
 4. Even better if you can do so while removing the two `- -`'s between `general` and `assembly`
 
 ```md
-<!-- your answer here -->
+str.reverse.chars.join('-').gsub(/- -/, ' ')
 ```
 
 ## What are three common "gotchas" in Ruby after learning Javscript.
 
 ```md
-<!-- your answer here -->
+The way you assign variables is totally different, assigning classes is also nowhere near similar, Ruby is not the same as JavaScript.
 ```
