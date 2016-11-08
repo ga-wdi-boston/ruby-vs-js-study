@@ -17,6 +17,14 @@ Use `grunt test` to test your code.
 Describe three examples of differens between Ruby and Javasctipt?
 
 ```md
+The use of == and ===.  In javascript we use === to compare two values.  In ruby we use ==.  Javascript also
+utlizes == but it returns a boolean.
+
+The syntaxt for functions is different.  If I wish to display 'Hello World' I would need to define the function
+in Ruby and then use 'puts' to display.  In JS I would create the function and console.log for diaplay.
+
+A more obvious difference is in how JS and Ruby are composed.  JS appears to be more complex at face value while
+Ruby can almost be interpreted in plain english terms.
 <!-- your answer here -->
 ```
 
@@ -28,14 +36,18 @@ Experiment in pry and place your answer below.
 
 ```ruby
 [1] pry(main)> name = "Jason"
-=> "Jason" [2] pry(main)> age = 28
+=> "Jason"
+[2] pry(main)> age = 28
 => 35
 [3] pry(main)> name + " is " + age.to_s + " years old."
 => "Jason is 28 years old."
 ```
 
 ```md
-<!-- your answer here -->
+man = {name: 'Jason', age: 28}
+man[:name] + ' is ' + man[:age].to_s + ' years old.'
+
+
 ```
 
 ## Ruby vs. Javascript :: String Methods
@@ -46,11 +58,14 @@ Experiment in pry and place your answer below.
 4. Even better if you can do so while removing the two `- -`'s between `general` and `assembly`
 
 ```md
-<!-- your answer here -->
+str = "ylbmessa lareneg"
+str.reverse.chars.to_s.strip.gsub(' ', '-').gsub(/[^\w-]/, '').gsub(/--/,'-')
 ```
 
 ## What are three common "gotchas" in Ruby after learning Javscript.
 
 ```md
-<!-- your answer here -->
+1. Using variables and semicolons
+2. Mistaking === for == and also == for =
+3. Null is not the same as Nil
 ```
