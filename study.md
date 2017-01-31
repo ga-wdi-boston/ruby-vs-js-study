@@ -147,7 +147,11 @@ this functionality.
 
 ```javascript
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let filtered = numbers.filter(numbers => numbers % 3 === 0);
+let filtered = numbers.filter(numbers => numbers % 3 === 0); ||
+
+// let filtered = numbers.filter(function(numbers) {
+//   numbers % 3 === 0
+// });
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
