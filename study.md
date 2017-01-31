@@ -17,7 +17,28 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+When you want to find out a value of something in javascript, you write 'typeof'
+and then the object. In ruby, you can just add .class to the object to find out
+that same information.
+
+Ruby can not increment with the ++, only the +=, which is also available to
+Javascript.
+
+
+The basic syntax of declaring a function in javascript vs declaring a method in
+ruby is the biggest syntax difference I notice and really important to understand.
+
+This is a ruby example:
+def hello
+  puts "hello"
+end
+
+and this is a Javascript example that would have the same effect:
+function hello() {
+  console.log("hello");
+}
+
+I used this article: http://ahimmelstoss.github.io/blog/2013/11/17/javascript-vs-ruby/
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -39,7 +60,12 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+let a = 1;
+let b = 2;
+const add = function(c, d){
+  return c + d;
+};
+add(a, b);
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +84,9 @@ console.log(`Many people drink ${beverage}.`);
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+def beverage = 'tea'
+puts "Many people drink #{beverage}"
+
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -70,14 +98,22 @@ look up Ruby's array and string methods, then check the
 [Ruby-Doc.org](https://ruby-doc.org).
 
 1.  Open `pry` in your terminal and set a variable, `str`, to `"eeffoc"`.
+str = "eefoc"
 1.  Reverse the string so that the output reads `"coffee"`.
+str.reverse
 1.  Change the string into an array of characters so that the output reads
     `["c", "o", "f", "f", "e", "e"]`.
+str.split(//)
 1.  Change your new array back into a string with hyphens in between characters
     so that your result is `"c-o-f-f-e-e"`.
 
+
 ```ruby
-# your answer here
+str = "eefoc"
+str = str.reverse
+str = str.split(//)
+str = str.join("-")
+
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +144,13 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+function Person(name, sentence){
+  this.name = name;
+  this.sentence = "Hello, my name is " + this.name;
+}
+
+new Person ("Jeff boomhauer", this.sentence);
+
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +171,12 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+filtered_numbers = numbers.filter((x) => x%3===0);
+
+
+
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -151,5 +198,5 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
-# your answer here
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map {|x| x ** 2}
 ```
