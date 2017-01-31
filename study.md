@@ -17,7 +17,11 @@ Use `grunt test` to test your code.
 Describe three examples of differens between Ruby and Javasctipt?
 
 ```md
-<!-- your answer here -->
+in Javascript you declare variables with const, let and var in ruby you just use the variable = somthing.
+
+ruby does not require ; after each object, line or function
+
+in ruby the the methods are more symantic
 ```
 
 ## Ruby Versus Javascript :: String Interpolation
@@ -46,11 +50,15 @@ Experiment in pry and place your answer below.
 4. Even better if you can do so while removing the two `- -`'s between `general` and `assembly`
 
 ```md
-<!-- your answer here -->
+str.reverse!
+str.split(%r{\s*})
+str.each_char {|c| print c,"""-"}
 ```
 
 ## What are three common "gotchas" in Ruby after learning Javscript.
 
 ```md
-<!-- your answer here -->
+and is not the same as &&
+=== is not the same as ==
+0, "" and [] are truthy
 ```
