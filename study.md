@@ -17,7 +17,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+<!-- No use of prototype in ruby
+In ruby in classes to acces attributes/keys only one method is needed attr_accessor while in js there is this.key
+In ruby no mandatory use of parenthesis to call functions. -->
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -39,7 +41,9 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+// let left_operand = parseInt = ('1');
+  //  let right_operand = parseInt = ('2');
+  //  let sum = left_operand + right_operand;
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +62,9 @@ console.log(`Many people drink ${beverage}.`);
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+#   beverage = "tea"
+#   puts "Many people drink ${beverage}"
+#
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -77,7 +83,32 @@ look up Ruby's array and string methods, then check the
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+# [3] pry(main)> str="eeffoc"
+# => "eeffoc"
+# [4] pry(main)> str.reverse
+# => "coffee"
+# [5] pry(main)> str.a
+# NoMethodError: undefined method `a' for "eeffoc":String
+# from (pry):7:in `__pry__'
+# [6] pry(main)> str.split('')
+# => ["e", "e", "f", "f", "o", "c"]
+# [7] pry(main)> str.reverse!
+# => "coffee"
+# [8] pry(main)> str.split('')
+# => ["c", "o", "f", "f", "e", "e"]
+# [9] pry(main)> str.join('')
+# NoMethodError: undefined method `join' for "coffee":String
+# from (pry):11:in `__pry__'
+# [10] pry(main)> str.join("-")
+# NoMethodError: undefined method `join' for "coffee":String
+# from (pry):12:in `__pry__'
+# [11] pry(main)> str.join('-')
+# NoMethodError: undefined method `join' for "coffee":String
+# from (pry):13:in `__pry__'
+# [12] pry(main)> str = str.split('')
+# => ["c", "o", "f", "f", "e", "e"]
+# [13] pry(main)> str.join('-')
+# => "c-o-f-f-e-e"
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +139,10 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+// // const person = function(name){
+// name = name;
+// console.log ('Hello, my name is + (name)');
+// }
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
