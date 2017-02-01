@@ -41,7 +41,9 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-sum = parseInt(left_operand) + parseInt(right_operand)
+let left_operand = '1';
+let right_operand = '2';
+const sum = parseInt(left_operand) + parseInt(right_operand);
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -60,6 +62,7 @@ console.log(`Many people drink ${beverage}.`);
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
+beverage = 'tea'
 puts "Many people drink #{beverage}."
 ```
 
