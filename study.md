@@ -17,7 +17,41 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+Ruby doesn't have conditions with {} or ; at the end of the line
+Ruby doesnt have let or const in front of name of variable
+Ruby defines function as def nameoffunction
+Ruby has only two false = nill and false everything else is truthy
+
+For example: in javascript Object
+
+let name = {};
+name['Boo'] = "tall";
+name['Luke'] = "short";
+
+for (key in name) { document.write(key, name[key]); }
+Object.keys(name);
+name.hasOwnProperty('Oliver')
+
+Object.keys(name).length
+
+delete h.Luke
+
+
+in ruby Hash
+
+name = {}
+name['Boo'] = "tall";
+name['Luke'] = "short";
+
+name.each { |key, value| puts "#{key} #{value}" }
+
+name.keys
+name.has_key?('c')
+
+name.lengthf
+
+name.delete("b")
+
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -39,7 +73,10 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+let left_operand = '1'
+let right_operand = '2'
+
+let sum = left_operand.parseFloat + right_operand.parseFloat
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +95,9 @@ console.log(`Many people drink ${beverage}.`);
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+beverage = 'tea'
+
+puts "Many people drink #{beverage}."
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -77,7 +116,11 @@ look up Ruby's array and string methods, then check the
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+str = "eeffoc"
+str.reverse.split
+"coffee".chars   (`I wasn't getting a right result when I put str.chars.`)
+str.join("-")
+
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +151,18 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+let Person = Class.create();
+Person.prototype = {
+  initialize: function(name) {
+    this.name = name;
+  },
+  say: function(message) {
+    return this.name + ': ' + message;
+  }
+};
+
+var employee = new Person('Peter Smith');
+employee.say('Will do!');
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +183,12 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+let numbers = [1,2,3,4,5,6,7,8,9,10]
+for (i = 0; i < numbers.length; i++) {
+   if (numbers[i] % 3 === 0) {
+     var filtered_numbers = numbers[i].filter();
+   }
+}
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -151,5 +210,7 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
-# your answer here
+numbers = [1,2,3,4,5,6,7,8,9,10];
+
+squares = Array.new(numbers.length){ |i| i * 2) }
 ```
