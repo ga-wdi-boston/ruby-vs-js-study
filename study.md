@@ -17,7 +17,11 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+Printing to the condsole:  javascript uses console.log; ruby uses puts
+Strings:  in Ruby, 'string' * 2 = 'stringstring'.  In javascript, the same
+result would be achieved by (new Array(2 + 1)).join('string').
+Arrays:  in Ruby, get the last item in an array by using a.last.  In javascript,
+you'd use a.slice(-1)[0]
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -38,8 +42,9 @@ sum = left_operand.to_i + right_operand.to_i
 
 Write some JavaScript code that duplicates this functionality.
 
-```javascript
-// your answer here
+const leftOperand = 1
+const rightOperand = 2
+sum = (leftOperand + rightOperand)
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +63,8 @@ console.log(`Many people drink ${beverage}.`);
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+beverage = "tea"
+puts "Many people like to drink #{beverage}."
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -77,7 +83,21 @@ look up Ruby's array and string methods, then check the
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+It took me a couple of tries, but here it is:
+$ pry
+[1] pry(main)> str = "eeffoc"
+=> "eeffoc"
+[2] pry(main)> str.reverse
+=> "coffee"
+[3] pry(main)> str.scan(/.{1,1}/).join('-')
+=> "e-e-f-f-o-c"
+[4] pry(main)> str.reverse!
+=> "coffee"
+[5] pry(main)> str.scan(/.{1,1}/).join('-')
+=> "c-o-f-f-e-e"
+[6] pry(main)>
+
+I found that here:  http://stackoverflow.com/questions/3168280/ruby-insert-spaces-every-x-number-of-characters
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +128,11 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+const person {
+  name: "Jeff Boomhauer"
+}
+
+console.log("Hello, my name is " + name)
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +153,16 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+I know this is wrong... but I am not sure what it should be.
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+      for (let i = 0; i < len; i++)
+      {
+         if (i % 3 = 0)
+         {
+            push[i]
+         }
+      }
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -151,5 +184,5 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
-# your answer here
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map { |n| n ** 2 }
 ```
