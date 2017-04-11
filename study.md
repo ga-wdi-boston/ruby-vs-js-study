@@ -17,7 +17,10 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+1. There are no functions in Ruby, only methods.
+2. REPL for Ruby is pry vs. JavaScript's node.
+3. When declaring a variable Ruby doesn't require a keyword where as JS does.
+
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -39,7 +42,10 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+let left_operand = parseInt('1')
+let right_operand = parseInt('2')
+
+sum = left_operand + right_operand
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +64,8 @@ console.log(`Many people drink ${beverage}.`)
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+beverage = 'tea'
+puts "Many people drink #{beverage}"
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -77,7 +84,10 @@ look up Ruby's array and string methods, then check the
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+str = "eeffoc"
+str = str.reverse
+str = str.chars
+str = str.join('-')
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +118,16 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+const Person = function(name) {
+  personName = name
+}
+
+Person.prototype.hello = function () {
+  console.log('Hello, my name is ${personName}')
+}
+
+const boomhauer = new Person('Jeff Boomhauer')
+boomhauer.hello()
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +148,7 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+const filteredNumbers = numbers.filter(number => number % 3 === 0)
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -151,5 +170,5 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
-# your answer here
+squares = numbers.map{ |number| number ** 2 }
 ```
