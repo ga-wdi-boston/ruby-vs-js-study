@@ -25,7 +25,7 @@ Javascript, let or const is required and a value is not required.
     they are called.
 
     Diff #3  Use of the Math library different (for example, finding the Max
-    value in an array).-->
+    value in an array). -->
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
