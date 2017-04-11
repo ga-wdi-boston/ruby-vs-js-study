@@ -17,7 +17,10 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+* You don't need const or let when declaring variables in Ruby
+* The keyword for declaring a method in Ruby is "def", in Javascript it would be "function() or ()=>"
+* You cannot use dot notation when accessing hash properties in Ruby
+* You dont need parens when calling a Ruby method
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -39,7 +42,9 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+const left_operand = "1"
+const right_operand = "2"
+const sum = parseInt(left_operand) + parseInt(right_operand)
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +63,8 @@ console.log(`Many people drink ${beverage}.`)
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+beverage = 'tea'
+puts "many people drink #{beverage}."
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -70,14 +76,17 @@ look up Ruby's array and string methods, then check the
 [Ruby-Doc.org](https://ruby-doc.org).
 
 1.  Open `pry` in your terminal and set a variable, `str`, to `"eeffoc"`.
-1.  Reverse the string so that the output reads `"coffee"`.
-1.  Change the string into an array of characters so that the output reads
+2.  Reverse the string so that the output reads `"coffee"`.
+3.  Change the string into an array of characters so that the output reads
     `["c", "o", "f", "f", "e", "e"]`.
-1.  Change your new array back into a string with hyphens in between characters
+4.  Change your new array back into a string with hyphens in between characters
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+str = "eeffoc"
+str.reverse!
+str = str.split('')
+str = str.join('-')
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +117,15 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+function Person (name) {
+  this.name = name
+  this.hello = function () {
+    console.log(`Hello, my name is ${this.name}.`)
+  }
+}
+boomhauer = new Person('Jeff Boomhauer')
+
+boomhauer.hello()
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +146,8 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const filteredNumbers = numbers.filter((number) => number % 3 === 0)
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -152,4 +170,6 @@ duplicate this functionality.
 
 ```ruby
 # your answer here
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+squares = numbers.map {|number| number ** 2}
 ```
