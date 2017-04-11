@@ -17,7 +17,15 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+1.To invoke methods in js you need to add the parenthases but in ruby you can write
+the methods without the paranthesis if it takes no arguments.
+
+2. In js you need to declare a new variable with either const or let but with
+ruby you can just write the name of the variable and assign it.
+
+3. with for loops and if statements in JS you use blocks of code inside curley
+braces to start and stop the logic. with Ruby you start with 'do' and 'if' and
+'end' to end it.
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -39,7 +47,9 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+const left_operand = '1'
+const right_operand = '2'
+const sum = +left_operand + +right_operand
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +68,7 @@ console.log(`Many people drink ${beverage}.`)
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+puts "Many people drink #{beverage}"
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -77,7 +87,10 @@ look up Ruby's array and string methods, then check the
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+str = 'eeffoc'
+str.reverse
+str.reverse.split('')
+str.reverse.split('').join('-')
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +121,15 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+function Person(name) {
+  this.name = name
+  this.hello = function () {
+    console.log("hello my name is " + this.name)
+  }
+}
+
+const boomhauer = new Person("Jeff Boomhauer")
+boomhauer.hello()
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +150,13 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+filteredNumbers = numbers.filter((i) => {
+  if (i % 3 === 0) {
+    return i
+  }
+})
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -151,5 +178,7 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
-# your answer here
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+squares = numbers.map {|number| number ** 2}
 ```
