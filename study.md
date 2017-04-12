@@ -17,7 +17,10 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+JS has functions and methods. In Ruby, they are both just methods.
+In Ruby, you can use "unless" rather than If when you need to do something given
+a certain condition without an else statement
+Ruby seems to have way more built-in object and array methods than JS
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -39,7 +42,7 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+parseInt(left_operand, 10) + parseInt(right_operand, 10)
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +61,9 @@ console.log(`Many people drink ${beverage}.`)
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+beverage = 'tea'
+
+puts "many people drink #{beverage}"
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -77,7 +82,12 @@ look up Ruby's array and string methods, then check the
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+str = "eeffoc"
+str.reverse!
+str = str.split("")
+str.join("-")
+
+end
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +118,13 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+const Person = function (name) {
+  this.name
+  this.hello = function () {
+    (console.log('Hello, my name is ' + this.name))
+}
+}
+
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +145,8 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+filterd_numbers = numbers.filter((i) => { return i % 3 === 0 } )
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -151,5 +168,7 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
-# your answer here
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+squares = numbers.map { |i| i ** 2 }
+
 ```
