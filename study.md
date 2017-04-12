@@ -17,7 +17,10 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+1 can define arrays without let, const, var
+2 no need for semicolons
+3 define functions by using def and end
+
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -39,7 +42,12 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+let sum = function (a, b) {
+  return a + b;
+}
+sum(1, 2)
+
+// 3
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +66,10 @@ console.log(`Many people drink ${beverage}.`)
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+beverage = "tea"
+  puts "many people drink #{beverage}"
+
+# many people drink tea
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -77,7 +88,11 @@ look up Ruby's array and string methods, then check the
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+str = "eeffoc"
+str.reverse
+str.split""
+str.split("")
+str.reverse.split("")
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +123,9 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+let person = "name"
+console.log("hello, my name is" + "${person}." );
+console.log("hello, my name is " + person + "." );
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +146,12 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let filtered = numbers.filter(numbers => numbers % 3 === 0); ||
+
+// let filtered = numbers.filter(function(numbers) {
+//   numbers % 3 === 0
+// });
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -151,5 +173,6 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
-# your answer here
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers_squared = numbers.map{|numbers| numbers ** 2}
 ```
