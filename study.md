@@ -17,7 +17,11 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+Equality is handled opposite nearly == is preferred in ruby as opposed to ===
+variable declaration requires value set at declaration in ruby
+ruby - there are no "functions" there is only methods
+in ruby there isn't implicit type conversion
+-one more for good measure ;)
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -39,7 +43,10 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+
+const left_operand = '1'
+const right_operand = '2'
+let sum = +left_operand + + right_operand
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +65,8 @@ console.log(`Many people drink ${beverage}.`)
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+beverage = 'tea'
+puts "Many people like to drink #{beverage}"
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -77,7 +85,11 @@ look up Ruby's array and string methods, then check the
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+ str = 'eeffoc'
+# "eeffoc"
+
+str.reverse.split('').join('-')
+# "c-o-f-f-e-e"
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +120,12 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+function Person(name) {
+  this.name = name
+}
+Person.prototype.hello = function () {
+      console.log('Hello, my name is', this.name)
+}
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +146,12 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+numbers.forEach(function(e, i, a) => {let filter_numbers = e %  3 === 0})
+
+// i looked at the solution after thrashing on this for a bit...those forEach
+// ARE KILLING ME!!!! :) This was what I had before looking at the solution.
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -151,5 +173,10 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
-# your answer here
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+numbers.map { |e| e * e }
+# even after an entire day of coding and 3 beers...I did this one off the top
+# of my head...ruby might be easier in some ways....
+
 ```
