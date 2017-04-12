@@ -17,7 +17,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+1. There are no functions in Ruby, only methods
+2. In JS, strict equality is represented by ===, whereas in Ruby strict equality is represented by ==
+3. In JS, you must explictly return values you want to use. In Ruby, a value will always be returned whether you write a method to return one or not
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -39,7 +41,11 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+function = sum(left_operand, right_operand){
+  return left_operand + right_operand
+}
+
+sum(1,2)
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +64,8 @@ console.log(`Many people drink ${beverage}.`)
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+beverage = "tea"
+puts "Many people like to drink ${beverage}."
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -70,14 +77,17 @@ look up Ruby's array and string methods, then check the
 [Ruby-Doc.org](https://ruby-doc.org).
 
 1.  Open `pry` in your terminal and set a variable, `str`, to `"eeffoc"`.
-1.  Reverse the string so that the output reads `"coffee"`.
-1.  Change the string into an array of characters so that the output reads
+2.  Reverse the string so that the output reads `"coffee"`.
+3.  Change the string into an array of characters so that the output reads
     `["c", "o", "f", "f", "e", "e"]`.
-1.  Change your new array back into a string with hyphens in between characters
+4.  Change your new array back into a string with hyphens in between characters
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+1. str = "eeffoc"
+2. str = str.reverse()
+3. str = str.split('')
+4. str = str.join('-')
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +118,9 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+const Person = function(name) {
+  return 'Hello, my name is ' + name
+}
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +141,7 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+const filteredNumbers = numbers.filter(number => number % 3 === 0)
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -151,5 +163,7 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
-# your answer here
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+squares = numbers.map{|number| number ** 2}
 ```
