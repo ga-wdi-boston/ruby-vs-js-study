@@ -17,7 +17,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+*no need to write let or var before declaring variables
+*no semi colon;
+*in javascript u can wtire string + var but in ruby you need to trasform the variable to strings
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -39,7 +41,10 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+left_operand =  '1'
+right_operand = '2'
+sum = parseInt(left_operand) + parseInt(right_operand)
+
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +63,8 @@ console.log(`Many people drink ${beverage}.`)
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+beverage = "tea"
+puts "many people drink #{beverage}"
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -77,7 +83,10 @@ look up Ruby's array and string methods, then check the
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+str = "eeffoc"
+str = str.reverse
+str = str.split ""
+str = str.chars.join('-')
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +117,9 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+let person = name;
+console.log("Hello, my name is ${name}.");
+console.log("Hello, my name is " + person);
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +140,29 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let filteredNumbers =  numbers.filter(function(number){
+  if (number %3 ===0) {
+    return number;
+  }
+});
+// fat arrow
+let filteredNumbers =  numbers.filter((number) => number%3===0);
+
+
+//the long way
+const filteredNumbers = function(numbers){
+  let filter = [];
+  for(let i=0; i<numbers.length; i++){
+    if (numbers[i] %3===0){
+      filter.push(numbers[i]);
+    }
+  };
+  return filter;
+
+};
+
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -151,5 +184,6 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
-# your answer here
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+numbers.map {|i| i ** 2}
 ```
