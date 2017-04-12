@@ -143,7 +143,7 @@ this functionality.
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 const filtered_numbers = function(numbers) {
-  let value = numbers.filter(numbers%3)
+  let value = numbers.filter(numbers%3 == 0)
   return value
 }
 ```
