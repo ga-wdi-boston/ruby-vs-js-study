@@ -125,7 +125,7 @@ function Person(name) {
 }
 Person.prototype.hello = function () {
       console.log('Hello, my name is', this.name)
-  }
+}
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
