@@ -17,7 +17,16 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+Ruby does not have ++ and -- operators, Javscript Does.
+Ruby has *=, /=, ||= operators, Javascript does not
+
+In Javascript you can access the a key of an object with dot notation.
+In ruby you must use bracket notation.
+
+Javascript uses {} for if statements.
+You can close an if statement in ruby with end.
+
+https://github.com/ga-wdi-boston/ruby
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -39,8 +48,12 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+ let leftOperand = '1'
+ let rightOperand = '2'
+
+ let sum = parseInt(leftOperand) + parseInt(rightOperand)
 ```
+Referenced: https://www.w3schools.com/jsref/jsref_parseint.asp
 
 ## Ruby vs. JavaScript: String Interpolation
 
@@ -58,7 +71,9 @@ console.log(`Many people drink ${beverage}.`)
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+beverage = "tea"
+
+puts "Many people drink #{beverage}"
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -77,7 +92,10 @@ look up Ruby's array and string methods, then check the
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+str = "eeffoc"
+str.reverse
+str.reverse.split('')
+["c", "o", "f", "f", "e", "e"].join('-')
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +126,15 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+const Person = function(name) {
+ this.name = name
+ this.sayHello = function() {
+  console.log(`Hello my name is ${name}`)
+ }
+}
+
+const arlo = new Person("Arlo")
+arlo.sayHello()
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +155,9 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const filteredNumbers = numbers.filter(number => number % 3 === 0)
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -151,5 +179,8 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
-# your answer here
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+squares = numbers.map { |n| n ** 2 }
 ```
+http://stackoverflow.com/questions/12084507/what-does-the-map-method-do-in-ruby
