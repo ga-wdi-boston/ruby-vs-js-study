@@ -18,6 +18,9 @@ Describe three examples of differences between Ruby and JavaScript.
 
 ```md
 <!-- your answer here -->
+-The languages declare their variables differently. JS uses let or const followed by a word in camel case styling whereas Ruby just needs some kind of letter/word with an assignment operator.
+-We can use negative numbers to get the value of an index, JS we can't.
+-Ruby has only two falsey values(false and nil) while JS has 6(false, 0, null, undefined, " ", NaN)
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -40,6 +43,12 @@ Write some JavaScript code that duplicates this functionality.
 
 ```javascript
 // your answer here
+let a = '1'
+let b = '2'
+const sumOfInt = function(a, b){
+  return parseInt(a) + parseInt(b)
+}
+
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -59,6 +68,8 @@ Write some Ruby code to duplicate this functionality.
 
 ```ruby
 # your answer here
+beverage = "tea"
+puts "Many people drink #{beverage}."
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -78,6 +89,10 @@ look up Ruby's array and string methods, then check the
 
 ```ruby
 # your answer here
+str = "eeffoc"
+str.reverse
+str.reverse.split("")
+str.reverse.split("").join("-")
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -109,6 +124,8 @@ Write some JavaScript code that duplicates this functionality.
 
 ```javascript
 // your answer here
+//don't remember how to do prototyping in JS, will come back to this later,
+
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -130,6 +147,10 @@ this functionality.
 
 ```javascript
 // your answer here
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let filterWords = numbers.filter(function(num){
+  return num % 3 === 0
+})
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -152,4 +173,6 @@ duplicate this functionality.
 
 ```ruby
 # your answer here
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+new_numbers = numbers.map { |n| n ** 2}
 ```
