@@ -168,5 +168,6 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.map! {|numbers| numbers ** 2}
 ```
