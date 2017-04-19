@@ -17,7 +17,10 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+pretty much as a rule, ruby is more syntactically simple than javascript.
+-First, blocks are not wrapped in {}, rather, they are opened with statements and closed with end statments.
+-many elements that would need to be syntactically defined in javascript are defined with methods in ruby. The best example of this is the .upto method, which serves to replace the end conditions of javascript that need to be wrapped in parentheses
+-finally, ruby uses implicit return values, meaning the last evaluated expression of a block will be the return value. Javascript does not do this and requires explicit return statements.
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -39,7 +42,10 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+let leftOperand = parseInt('1')
+let rightOperand = parseInt('2')
+
+const sum = leftOperand+rightOperand
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +64,8 @@ console.log(`Many people drink ${beverage}.`)
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+beverage = "tea"
+puts "Many people drink #{beverage}"
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -77,7 +84,11 @@ look up Ruby's array and string methods, then check the
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+str="eeffoc"
+str.reverse!
+str=str.split('')
+# could not find how to add the hyphens
+str.join!
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +119,19 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+class person {
+  constructor(name) {
+    this.name = name
+  }
+
+  consr hello(){
+    console.log("Hello, my name is " + this.name)
+  }
+}
+
+const boomhauer = new person("Jeff Boomhauer")
+
+boomhauer.hello()
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +152,9 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+const filteredNumbers = numbers.filter(number => {
+  return number % 3 === 0
+})
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -151,5 +176,5 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
-# your answer here
+squares = numbers.map { |number| number *= 2 }
 ```
