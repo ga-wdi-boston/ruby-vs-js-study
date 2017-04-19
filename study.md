@@ -39,7 +39,9 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+let left_operand = '1'
+let right_operand = '1'
+let sum = parseInt(left_operand) + parseInt(right_operand)
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +60,8 @@ console.log(`Many people drink ${beverage}.`)
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+beverage = "tea"
+puts "Many people drink #{beverage}"
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -77,7 +80,10 @@ look up Ruby's array and string methods, then check the
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+str = "eeffoc"
+str.reverse!
+new_arr = str.split("")
+new_arr.join("-")
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +114,17 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+const Person = function(name) {
+  this.name = name;
+}
+
+Person.prototype.hello = function() {
+  console.log(`Hello, my name is ${this.name}.`);
+}
+
+const boomhauer = new Person('Jeff Boomhauer');
+
+boomhauer.hello();
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +145,7 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+filtered_numbers = numbers.filter(n => n % 3 === 0)
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -151,5 +167,6 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
-# your answer here
+squares = numbers.map { |i| i ** 2 }
+
 ```
