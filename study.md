@@ -167,5 +167,5 @@ duplicate this functionality.
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-squares = numbers.map { |i| i ** 2}
+squares = numbers.map { |i| i ** 2 }
 ```
