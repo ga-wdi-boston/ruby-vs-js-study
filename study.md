@@ -17,7 +17,11 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+No use of let and const in Ruby, just use the varable name.
+Ruby has lots of short cuts to writing code.  Don't need () or {} making coding faster.
+Looping methods in Ruby are much more flexible and written quickly.
+=== vs ==
+++ and -- are not in Ruby
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -39,7 +43,7 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+sum = +left_operand +right_operand
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +62,8 @@ console.log(`Many people drink ${beverage}.`)
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+beverage = "tea"
+puts("Many people drink #{beverage}")
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -77,7 +82,10 @@ look up Ruby's array and string methods, then check the
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+str = "eeffoc"
+str.reverse
+str.split(//)
+str.reverse.each_char{|c| print c, '-'}
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +116,14 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+const Person = function(name) {
+  this.name = name;
+}
+Person.prototype.hello = function() {
+  console.log(`Hello, my name is ${this.name}.`);
+}
+const jeff = new Person('Jeff Boomhauer');
+jeff.hello();
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +144,7 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+const filteredNumbers = numbers.filter(number => number % 3 === 0);
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
@@ -151,5 +166,6 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
-# your answer here
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+squares = numbers.map { |i| i ** 2 }
 ```
